@@ -37,7 +37,7 @@ function Profile() {
       const tripHistory = response.data;
       setTripData(tripHistory);
     } catch (err) {
-      console.log(err);
+      console.error(err);
     }
   }
   useEffect(() => {
@@ -56,7 +56,7 @@ function Profile() {
       getTripHistory(userData?.user_email);
       alert(response.data);
     } catch (err) {
-      console.log(err);
+      console.error(err);
     } finally {
       setLoading(false);
     }

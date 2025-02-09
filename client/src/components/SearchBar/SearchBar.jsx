@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaSearch } from "react-icons/fa";
 import "./SearchBar.css";
 
 const SearchBar = ({ setQuery, setSearchQuery, query }) => {
   const handleSearch = (e) => {
     e.preventDefault();
-    alert(`Searching for: ${query}`);
+    setSearchQuery(query);
+    // alert(`Searching for: ${query}`);
   };
 
   return (

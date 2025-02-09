@@ -15,7 +15,7 @@ const UserContextProvider = ({ children }) => {
           Authorization: `Bearer ${token}`,
         },
       });
-      console.log(response.data);
+      // console.log(response.data);
       setUserData(response.data);
     } catch (err) {
       setUserData(false);

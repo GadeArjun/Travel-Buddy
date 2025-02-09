@@ -28,12 +28,12 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="#" onClick={() => setMenuOpen(!menuOpen)}>
+          <Link to="/about" onClick={() => setMenuOpen(!menuOpen)}>
             About
           </Link>
         </li>
         <li>
-          <Link to="#" onClick={() => setMenuOpen(!menuOpen)}>
+          <Link to="/contact" onClick={() => setMenuOpen(!menuOpen)}>
             Contact
           </Link>
         </li>

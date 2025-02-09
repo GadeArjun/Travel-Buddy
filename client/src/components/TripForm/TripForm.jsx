@@ -100,7 +100,7 @@ function TripForm() {
         mode_of_transport: modeOfTransport,
       };
 
-      console.log("Trip Data:", tripFormData);
+      // console.log("Trip Data:", tripFormData);
 
       const response = await axios.post(
         `${import.meta.env.VITE_BE}/trip`,

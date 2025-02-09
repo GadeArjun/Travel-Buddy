@@ -9,6 +9,8 @@ import SignUp from "./pages/SignUp/SignUp";
 import SignIn from "./pages/SignIn/SignIn";
 import Chat from "./pages/Chat/Chats";
 import Profile from "./pages/Profile/Profile";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       {/* <Router> */}
       <Routes>
         <Route element={<Home />} path="/" />
+        <Route element={<About />} path="/about" />
+        <Route element={<Contact />} path="/contact" />
         <Route element={<SignUp />} path="/signup" />
         <Route element={<SignIn />} path="/signin" />
         <Route element={<Destination />} path="/search-destination" />

@@ -55,6 +55,7 @@ function UserFeedback() {
         setFeedbacks(prevFeedbacks);
         setLoading(false);
       } catch (err) {
+        console.error(err);
         setError("Failed to fetch feedbacks.");
       }
     };
@@ -66,6 +67,7 @@ function UserFeedback() {
     try {
       await axios.post(`${import.meta.env.VITE_BE}/feedback`, feedbackData);
     } catch (error) {
+      console.error(error);
       setError("Failed to submit feedback.");
     }
   }

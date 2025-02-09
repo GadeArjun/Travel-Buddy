@@ -44,7 +44,7 @@ function Chats() {
 
       const tripData = response.data;
 
-      console.log({ tripData });
+      // console.log({ tripData });
 
       const filteredUserList = tripData
         .filter(
@@ -59,7 +59,7 @@ function Chats() {
         );
 
       setUsersList(filteredUserList);
-      console.log(filteredUserList);
+      // console.log(filteredUserList);
     } catch (err) {
       console.error(err);
     }
@@ -98,7 +98,7 @@ function Chats() {
         setMessages(messages);
       }
     } catch (error) {
-      console.log({ error });
+      console.error({ error });
     }
   }
 
@@ -133,7 +133,7 @@ function Chats() {
       );
       // console.log(response.data);
     } catch (err) {
-      console.log({ err });
+      console.error({ err });
     }
   }
 

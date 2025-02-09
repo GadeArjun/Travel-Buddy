@@ -9,6 +9,7 @@ import {
   FaPhoneAlt,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -19,19 +20,19 @@ const Footer = () => {
           <h3>Quick Links</h3>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#">Destinations</a>
+              <Link to="/search-destination">Destinations</Link>
             </li>
             <li>
-              <a href="#">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
             <li>
-              <a href="#">Register Now</a>
+              <Link to="/signup">Register Now</Link>
             </li>
           </ul>
         </div>
@@ -40,10 +41,11 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Contact Us</h3>
           <p>
-            <FaMapMarkerAlt /> 123 Travel Street, New York, USA
+            <FaMapMarkerAlt /> 123 MG Road, Shivajinagar, Pune, Maharashtra,
+            411005, India
           </p>
           <p>
-            <FaPhoneAlt /> +1 234 567 890
+            <FaPhoneAlt /> +91 9087614352
           </p>
           <p>
             <FaEnvelope /> support@travel.com
@@ -63,18 +65,18 @@ const Footer = () => {
 
       {/*  Social Media Links */}
       <div className="social-media">
-        <a href="#">
+        <Link to="#">
           <FaFacebook />
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="#">
           <FaInstagram />
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="#">
           <FaTwitter />
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="#">
           <FaYoutube />
-        </a>
+        </Link>
       </div>
 
       {/*  Copyright Section */}

@@ -41,7 +41,7 @@ const SignUp = () => {
         // console.log("Turn on location for better suggetions");
       }
     } catch (err) {
-      console.log(err);
+      console.error(err);
     }
   }
   useEffect(() => {
@@ -58,7 +58,7 @@ const SignUp = () => {
 
     try {
       const updatedFormData = { ...formData, user_location: position };
-      console.log(updatedFormData);
+      // console.log(updatedFormData);
       const response = await axios.post(`${import.meta.env.VITE_BE}/signup`, {
         formData: updatedFormData,
       });

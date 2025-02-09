@@ -19,7 +19,6 @@ function MessageSection({
     window.scrollTo(0, 0);
   }, []);
 
-
   function handleMsg(e) {
     setMsg(e.target.value);
   }
@@ -167,7 +166,7 @@ function MessageSection({
         )}
 
         <div className="selected-user-profile">
-          <p> {userClick ? userClick.user_name[0] : "NA"}</p>
+          <p> {userClick ? userClick.user_name[0] : "TB"}</p>
         </div>
         <div className="selected-user-name">
           <p>

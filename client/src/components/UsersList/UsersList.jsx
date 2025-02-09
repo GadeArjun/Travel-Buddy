@@ -73,7 +73,7 @@ function UsersList({ userData, usersList, setUserClick, placeName }) {
         const filteredUserDetails = filterUsers(userDetails);
         setUserDetails(filteredUserDetails);
       } catch (err) {
-        console.log({ err });
+        console.error({ err });
       }
     }
 
