@@ -14,7 +14,8 @@ require("dotenv").config();
 
 const server = express();
 server.use(express.json());
-// server.use(express.static(), path.join(__dirname, "public", "dist"));
+server.use(cors());
+server.use(express.static(path.resolve(__dirname, "public", "dist")));
 
 //
 // routers
@@ -26,11 +27,16 @@ server.use(messagesRouter);
 server.use(userRouter);
 server.use(requestRouter);
 server.use(feedbackRouter);
-// databse connectivity
 
 server.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "dist", "index.html"));
+  try {
+    res.sendFile(path.join(__dirname, "public", "dist", "index.html"));
+  } catch (err) {
+    console.log(err);
+  }
 });
+
+// databse connectivity
 
 mongooseConnection();
 
