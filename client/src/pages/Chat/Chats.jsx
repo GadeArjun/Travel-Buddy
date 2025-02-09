@@ -47,7 +47,10 @@ function Chats() {
       console.log({ tripData });
 
       const filteredUserList = tripData
-        .filter((item) => item.destination.toLowerCase() === explorePlace?.name.toLowerCase() )
+        .filter(
+          (item) =>
+            item.destination.toLowerCase() === explorePlace?.name.toLowerCase()
+        )
         .filter((item) => item.user_email !== userData?.user_email)
         .filter(
           (item, index, self) =>
