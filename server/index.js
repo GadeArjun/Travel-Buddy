@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 const { mongooseConnection } = require("./database/db");
 const { placesRouter } = require("./routes/places");
 const { tripRouter } = require("./routes/trip");
@@ -13,6 +14,8 @@ require("dotenv").config();
 
 const server = express();
 server.use(express.json());
+// server.use(express.static(), path.join(__dirname, "public", "dist"));
+
 //
 // routers
 server.get("/auth", userAuthentication);
@@ -24,6 +27,11 @@ server.use(userRouter);
 server.use(requestRouter);
 server.use(feedbackRouter);
 // databse connectivity
+
+server.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "dist", "index.html"));
+});
+
 mongooseConnection();
 
 //
